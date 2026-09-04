@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisissez votre langue / Choose your language</title>
+    <style>
+        :root {
+            --bg-start: #5b8def;
+            --bg-end: #7b6df0;
+            --card-bg: rgba(255, 255, 255, 0.97);
+            --text-dark: #1f2430;
+            --text-muted: #6b7280;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: radial-gradient(circle at 20% 20%, var(--bg-start), var(--bg-end));
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px 32px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+            .card h1 {
+                font-size: 22px;
+                color: var(--text-dark);
+                margin: 0 0 6px;
+            }
+
+            .card p.subtitle {
+                color: var(--text-muted);
+                font-size: 14px;
+                margin: 0 0 28px;
+            }
+
+        .lang-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            background: #f4f6fb;
+            border: 1px solid #e5e9f2;
+            border-radius: 14px;
+            padding: 16px 18px;
+            color: var(--text-dark);
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+            .lang-btn:hover,
+            .lang-btn:active {
+                background: #eef1fb;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(91, 141, 239, 0.18);
+            }
+
+        .flag {
+            font-size: 26px;
+            line-height: 1;
+        }
+
+        .lang-btn .native-name {
+            flex: 1;
+            text-align: left;
+        }
+
+        .lang-btn.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .lang-btn .arrow {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        footer {
+            margin-top: 28px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Choisissez votre langue</h1>
+        <p class="subtitle">Choose your language · اختر لغتك · Escolha seu idioma · Alegeți limba</p>
+
+        <div class="lang-list">
+            <a class="lang-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HU3MhMYCXk24EbbLr-ooTcULzQZ6MmZIsFrpyfa2dxxUN0xMVkwyUlFGTThUNFNUM1kzWTc5NzhDTy4u&origin=QRCode">
+                <span class="flag">🇬🇧</span>
+                <span class="native-name">English</span>
+                <span class="arrow">›</span>
+            </a>
+
+            <a class="lang-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HU3MhMYCXk24EbbLr-ooTcULzQZ6MmZIsFrpyfa2dxxUQUFJNUhURTg4RUhQTjA3S1NESFRFTDRCOS4u&origin=QRCode">
+                <span class="flag">🇫🇷</span>
+                <span class="native-name">Français</span>
+                <span class="arrow">›</span>
+            </a>
+
+            <a class="lang-btn" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=HU3MhMYCXk24EbbLr-ooTcULzQZ6MmZIsFrpyfa2dxxUMzBVRjRHR0lPWDJMSVZYRVJSWUs4MkRWSC4u&origin=QRCode&qrcodeorigin=presentation&route=shorturl" dir="rtl">
+                <span class="flag">🇸🇦</span>
+                <span class="native-name">العربية</span>
+                <span class="arrow">›</span>
+            </a>
+
+            <a class="lang-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HU3MhMYCXk24EbbLr-ooTcULzQZ6MmZIsFrpyfa2dxxUMVFaTkpWUTkzMzQ0U05BUjRTSDFBT05OSy4u&origin=QRCode">
+                <span class="flag">🇧🇷</span>
+                <span class="native-name">Português</span>
+                <span class="arrow">›</span>
+            </a>
+
+            <a class="lang-btn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=HU3MhMYCXk24EbbLr-ooTcULzQZ6MmZIsFrpyfa2dxxUOTlURkJIRFo2TU1UMVVVODBaWkpRVzZGMy4u&origin=QRCode">
+                <span class="flag">🇷🇴</span>
+                <span class="native-name">Română</span>
+                <span class="arrow">›</span>
+            </a>
+        </div>
+
+        <footer>Consultation médicale avec parents · Medical check-up with parents</footer>
+    </div>
+
+</body>
+</html>
